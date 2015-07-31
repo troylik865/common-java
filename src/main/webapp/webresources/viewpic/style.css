@@ -1,0 +1,177 @@
+* {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+A {
+	
+}
+:focus {
+	OUTLINE-WIDTH: 0px
+}
+LABEL {
+	CURSOR: pointer
+}
+IMG {
+	VERTICAL-ALIGN: middle
+}
+TABLE {
+	BORDER-SPACING: 0; BORDER-COLLAPSE: collapse; EMPTY-CELLS: show
+}
+H1 {
+	FONT-SIZE: 16px
+}
+H2 {
+	FONT-SIZE: 14px
+}
+H3 {
+	FONT-SIZE: 14px
+}
+H4 {
+	FONT-SIZE: 14px
+}
+H5 {
+	FONT-SIZE: 12px
+}
+H6 {
+	FONT-SIZE: 12px
+}
+ABBR {
+	BORDER-RIGHT-WIDTH: 0px; FONT-VARIANT: normal; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+ACRONYM {
+	BORDER-RIGHT-WIDTH: 0px; FONT-VARIANT: normal; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+ADDRESS {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+CAPTION {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+CITE {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+CODE {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+DFN {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+EM {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+TH {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+VAR {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+OPTGROUP {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+INPUT {
+	FONT-FAMILY: inherit
+}
+BUTTON {
+	FONT-FAMILY: inherit
+}
+TEXTAREA {
+	FONT-FAMILY: inherit
+}
+SELECT {
+	FONT-FAMILY: inherit
+}
+OPTGROUP {
+	FONT-FAMILY: inherit
+}
+OPTION {
+	FONT-FAMILY: inherit
+}
+INPUT {
+	FONT-SIZE: 100%
+}
+BUTTON {
+	FONT-SIZE: 100%
+}
+TEXTAREA {
+	FONT-SIZE: 100%
+}
+SELECT {
+	FONT-SIZE: 100%
+}
+A {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+IMG {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+A {
+	COLOR: #5e5e5e; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #5e5e5e; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #4183c4; TEXT-DECORATION: underline
+}
+.clear {
+	LINE-HEIGHT: 0; DISPLAY: block; HEIGHT: 0px; CLEAR: both; FONT-SIZE: 0px; OVERFLOW: hidden
+}
+.clearfix:after {
+	DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; CLEAR: both; CONTENT: "."
+}
+.clearfix {
+	DISPLAY: inline-table
+}
+* HTML .clearfix {
+	HEIGHT: 1%
+}
+.clearfix {
+	DISPLAY: block
+}
+* + HTML .clearfix {
+	MIN-HEIGHT: 1%
+}
+BODY {
+	FONT: 12px/180% Arial,Lucida,Verdana,"ËÎÌå",Helvetica,sans-serif; BACKGROUND: #fff; COLOR: #333
+}
+.shortcut {
+	Z-INDEX: 9999; POSITION: fixed; WIDTH: 100%; TOP: 0px; LEFT: 0px
+}
+* HTML {
+	BACKGROUND-IMAGE: url(about:blank); BACKGROUND-ATTACHMENT: fixed
+}
+* HTML BODY {
+	BACKGROUND-IMAGE: url(about:blank); BACKGROUND-ATTACHMENT: fixed
+}
+* HTML .shortcut {
+	POSITION: absolute; ; TOP: expression(eval(document.documentElement.scrollTop))
+}
+.shortcut {
+	BORDER-BOTTOM: #dddddd 1px solid; LINE-HEIGHT: 28px; TEXT-TRANSFORM: uppercase; BACKGROUND: #eeeeee; HEIGHT: 28px; FONT-SIZE: 12px; box-shadow: 1px 0px 2px rgba(0,0,0,0.2)
+}
+.shortcut H1 {
+	FONT-FAMILY: "Î¢ÈíÑÅºÚ","ËÎÌå"; FONT-SIZE: 14px
+}
+.shortcut A {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; LETTER-SPACING: 1px; PADDING-RIGHT: 10px; DISPLAY: block; FLOAT: left; COLOR: #333; PADDING-TOP: 0px; text-shadow: 0px 1px 1px #fff
+}
+.shortcut H1 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; LETTER-SPACING: 1px; PADDING-RIGHT: 10px; DISPLAY: block; FLOAT: left; COLOR: #333; PADDING-TOP: 0px; text-shadow: 0px 1px 1px #fff
+}
+.shortcut A:hover {
+	BACKGROUND: #fff
+}
+.shortcut SPAN.right {
+	FLOAT: right
+}
+.shortcut SPAN.right A {
+	DISPLAY: block; FLOAT: left; COLOR: #ff6600; FONT-WEIGHT: 800
+}
+.headeline {
+	HEIGHT: 40px; OVERFLOW: hidden
+}
+.adv960x90 {
+	BORDER-BOTTOM: #e6e6e6 1px solid; BORDER-LEFT: #e6e6e6 1px solid; MARGIN: 0px auto; WIDTH: 960px; HEIGHT: 90px; OVERFLOW: hidden; BORDER-TOP: #e6e6e6 1px solid; BORDER-RIGHT: #e6e6e6 1px solid
+}
+.adv728x90 {
+	BORDER-BOTTOM: #e6e6e6 1px solid; BORDER-LEFT: #e6e6e6 1px solid; MARGIN: 0px auto; WIDTH: 728px; HEIGHT: 90px; OVERFLOW: hidden; BORDER-TOP: #e6e6e6 1px solid; BORDER-RIGHT: #e6e6e6 1px solid
+}

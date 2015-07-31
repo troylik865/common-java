@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<!-- 导入数据访问对象 -->
+	<import resource="classpath*:/spring/applicationContext.xml" />
+	<!-- 导入安全认证对象. -->
+	<import resource="classpath*:/spring/applicationContext-shiro.xml" />
+	<!-- 导入webservice axis对象. -->
+	<import resource="classpath*:/spring/applicationContext-axis.xml" />
+</beans>

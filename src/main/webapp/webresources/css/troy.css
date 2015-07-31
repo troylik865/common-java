@@ -1,0 +1,207 @@
+.divCenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.demoDiv {
+    width: 700px;
+    height: 400px;
+    margin-top: 200px;
+}
+
+.troyFrom {
+    margin: 0px auto;
+}
+
+.registTable {
+    width: 400px;
+    margin: 0px auto;
+}
+
+
+.registTableL {
+    width: 490px;
+    margin: 0px auto;
+}
+
+.registTable label {
+    font-size: 14px;
+    letter-spacing: 8px;
+}
+
+.registTable tr {
+    height: 40px;
+    line-height: 40px;
+}
+
+.registTableL tr {
+    height: 50px;
+    line-height: 50px;
+}
+
+.troyFrom table tr td div {
+    text-align: center;
+    font-size: 14px;
+}
+
+.troySelect {
+    min-width: 60px;
+    height: 25px;
+    font-size: 13px;
+    border-radius: 4px;
+    border: 1px #A7A4A4 solid;
+    line-height: 25px;
+    text-align: center;
+    float: left;
+}
+
+.troyArea {
+    border: 1px #A7A4A4 solid;
+    height: 200px;
+    border-radius: 6px;
+}
+
+.buttonDiv {
+    text-align: center;
+    margin-top:2px;
+}
+
+.headFrame {
+    height: 280px;
+    width: 100%;
+    border: 0px;
+    margin-top:-6px;
+}
+
+.titleFrame {
+    height: 50px;
+    width: 100%;
+    border: 0px;
+}
+
+.searchFrame {
+    height: 60px;
+    width: 100%;
+    border: 0px;
+}
+
+.leftGuideFrame {
+    height: 900px;
+    border: 0px;
+}
+
+.contentFrame {
+    width: 100%;
+    height:1200px;
+    border: 0px;
+}
+
+.contentFrame2 {
+    width: 100%;
+    height:1300px;
+    border: 0px;
+}
+
+
+
+.first {
+    width: 100%;
+    height: 1050px;
+    border: 0px;
+}
+
+.contentFrame1 {
+    width: 100%;
+    height: 700px;
+    border: 0px;
+}
+
+.fileCompenent {
+    color: #4c4b4b;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #706F6F;
+    border-radius: 3px;
+    background-color: #e5e5e5;
+}
+
+.formTitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.smallTile {
+    font-size: 10px;
+    font-weight: lighter;
+    color: #000000;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.textStyle {
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.fontRed{
+    color:red;
+}
+
+.divContent ul{
+	width:100%;
+    z-index: 100;
+    list-style-type: none;
+    margin-left:-30px;
+}
+.divContent ul li{
+    position: relative;
+    display: inline;
+    float: left;
+    margin-left:50px;
+    font-size:14px;
+    height:40px;
+}
+.divContent ul li a{
+    color: #2b0000;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.pageDiv{
+    font-size: 12px;
+    margin-top:220px;
+    float:right;
+    margin-right:20px;
+}
+.pageDiv a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin-left:10px;
+    color: #646163;
+}
+
+.selected{
+    font-size:16px;
+}
+
+
+.columnTitle{
+    background: url(../images/button_bg.png) no-repeat;
+    border-radius: 4px;
+}
+
+.titlePic{
+    background: url(../images/templatemo_menu.png) no-repeat;
+    height:30px;
+    border-radius:6px;
+}
+
+

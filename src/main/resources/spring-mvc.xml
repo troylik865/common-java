@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<!-- 自动扫描且只扫描@Controller -->
+	<context:component-scan base-package="org.troy" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+	</context:component-scan>
+
+    <mvc:annotation-driven>
+    	<mvc:argument-resolvers>  
+           <bean class="org.troy.common.component.spring.bind.resolver.RequestJsonParamMethodArgumentResolver"/>  
+       </mvc:argument-resolvers>  
+        <mvc:message-converters register-defaults="true">
+            <bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>  
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/plain;charset=UTF-8</value>
+                        <value>text/html;charset=UTF-8</value>
+                        <!-- 页面上ajax的期望类型是json, 所以这里也要配置下-->
+                        <value>application/json;charset=UTF-8</value>
+                    </list>
+                </property>
+            </bean>
+            <!-- fastjosn spring support -->
+            <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>application/json;charset=UTF-8</value>
+                        <value>text/plain;charset=UTF-8</value>
+                        <value>text/html;charset=UTF-8</value>
+                    </list>
+                </property>
+                <property name="features">
+                    <list>
+                        <value>QuoteFieldNames</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <bean  class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/WEB-INF/views/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+	<!-- 系统日志跟踪功能 -->
+<!-- 	<bean id="logHelper" class="org.troy.common.component.log.impl.LogHelper" > -->
+<!-- 		<property name="logService" ref="logServiceImpl"/> -->
+<!-- 		<property name="rootLogLevel" value="ERROR"/> -->
+<!-- 		<property name="customLogLevel"> -->
+<!--            <map> -->
+<!--               <entry key="org.troy" value="TRACE" /> -->
+<!--            </map> -->
+<!--        </property> -->
+<!-- 	</bean> -->
+	
+	<!-- 拦截器 -->
+	<mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/api/**"/>
+            <mvc:exclude-mapping path="/api/query_node"/>
+            <mvc:exclude-mapping path="/api/dz"/>
+            <mvc:exclude-mapping path="/api/pos_notify"/>
+            <mvc:exclude-mapping path="/api/arrearage_notify"/>
+            <bean class="org.troy.system.controller.api.interceptor.ApiInterceptor"/>
+        </mvc:interceptor>
+	</mvc:interceptors>	
+
+	<!-- 将无法mapping到Controller的path交给default servlet handler处理 -->
+	<mvc:default-servlet-handler/>
+	
+	<!-- 定义无Controller的path<->view直接映射 -->
+	<mvc:view-controller path="/" view-name="redirect:/login"/>
+	
+	<!-- 上传插件 -->
+	<bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+	    <property name="maxUploadSize" value="102400000"/>  
+	</bean>
+	
+	<!-- 支持 Shiro对Controller的方法级AOP安全控制 begin-->
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor">
+		<property name="proxyTargetClass" value="true" />
+	</bean>
+	
+	<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+    	<property name="securityManager" ref="securityManager"/>
+	</bean>
+	<!-- 支持 Shiro对Controller的方法级AOP安全控制 end  -->
+	
+	 <!-- 全局异常配置 start -->  
+     <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">  
+         <property name="exceptionMappings">  
+             <props>  
+                 <prop key="java.lang.Exception">error/500</prop>  
+                 <prop key="java.lang.Throwable">error/500</prop>
+                 <prop key="org.apache.shiro.authz.UnauthorizedException">error/403</prop>  
+             </props>  
+         </property>  
+         <property name="statusCodes">  
+             <props>  
+                 <prop key="500">500</prop>  
+                 <prop key="404">404</prop>
+                 <prop key="403">403</prop>  
+             </props>  
+         </property>  
+         <!-- 设置日志输出级别，不定义则默认不输出警告等错误日志信息 -->  
+         <property name="warnLogCategory" value="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver"/>  
+         <!-- 默认错误页面，当找不到上面mappings中指定的异常对应视图时，使用本默认配置 -->  
+         <property name="defaultErrorView" value="error/500"/>  
+         <!-- 默认HTTP状态码 -->  
+         <property name="defaultStatusCode" value="500"/>  
+     </bean>  
+     <!-- 全局异常配置 end -->	
+</beans>

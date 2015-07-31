@@ -1,0 +1,141 @@
+html, body, .map {
+    padding:0;
+    margin:0;
+    height:100%;
+}
+
+#mapDiv{
+   background-color: #F3F7FA;
+}
+#mapDiv2{
+	height:490px;
+}
+.container{
+    width: 100%;
+}
+.status {
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border: solid 1px white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 100px;
+    height: 20px;
+    position:absolute;
+    z-index: 500;
+    left: 450px;
+    top: 230px;
+    font-size:14px;
+    font-family:'微软雅黑';
+}
+#HomeButton,#HomeButton2 {
+	background-color: #666;
+    position: absolute;
+    top: 95px;
+    left: 20px;
+    z-index: 50;
+}
+.actionList{
+    display: none;
+}
+.titlePane{
+	height: 21px;
+}
+.titlePane .title{
+	padding-top: 5px;
+}
+.area { width: 100%; }
+.mapsbar { height: 32px; padding-top: 5px;background-image: url('../viewpic/top_background.png'); }
+.mapsbar .left { height: 30px; line-height: 24px; margin-left: 20px;float: left; }
+.mapsbar .left a { color: rgb(0, 0, 0); }
+.mapsbar .right { height: 30px; line-height: 24px; margin-right: 20px;float: right; }
+.mapsbar .right span.zhankai{
+    width: 102px;
+    height: 25px;
+    float: right;
+    background: url('../viewpic/exp.png');
+
+}
+.select_box {
+    z-index: 99;
+    width: 110px;
+    border: 1px solid #ccc;
+    padding-right: 20px;
+    padding-left: 10px;
+    background: url('../viewpic/107.gif') no-repeat 120px center;
+    position: relative;
+}
+.serach_btn {
+    background: url('../viewpic/search_btn_bg.png');
+    width: 72px;
+    height: 25px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+}
+.mapsbar .right span.zhankai a { line-height: 22px; padding-left: 16px; color: rgb(255, 255, 255); }
+.mapsbar .right span.zhankai a:hover { background-position: 0px -468px; text-decoration: none; }
+.maparea { position: relative; }
+.overview {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 570px;
+    height: 100%;
+    z-index: 100;
+    background: url('../viewpic/map_right_bg.png') repeat-y scroll left top rgb(255, 255, 255);
+    padding-left: 5px;
+}
+
+.overview2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 100;
+    overflow: hidden;
+    background: url('../viewpic/map_right_bg.png') repeat-y scroll left top rgb(255, 255, 255);
+    padding-left: 6px;
+    background-color: #E5EFF7;
+}
+.items{
+    width: 100%;
+    height: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+}
+.result_title{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    height: 40px;
+    padding-top: 10px;
+}
+.top_txt {padding-left: 20px; color: rgb(51, 51, 51); font-size: 14px; height: 40px; line-height: 40px; font-weight: bold; text-align: left; }
+.top_txt em { color: rgb(102, 102, 102); font: 10px/10px 'Arial, Helvetica, sans-serif'; margin-left: 8px; }
+
+/* 简易数据表格-格边框 */
+.m-table{table-layout:fixed;width:100%;line-height:1.5;}
+.m-table th,.m-table td{padding:10px;border:1px solid #ddd;}
+.m-table th{font-weight:bold;}
+.m-table tbody tr:nth-child(2n){background:#fafafa;}
+.m-table tbody tr:hover{background:#f0f0f0;}
+.m-table .cola{width:100px;}
+.m-table .colb{width:200px;}
+/* 简易数据表格-行边框*/
+.m-table-row th,.m-table-row td{border-width:0 0 1px;}
+/* 简易数据表格-圆角*/
+.m-table-rds{border-collapse:separate;border:1px solid #ddd;border-width:0 1px 1px 0;border-radius:5px;}
+.m-table-rds th,.m-table-rds td{border-width:1px 0 0 1px;}
+.m-table-rds > :first-child > :first-child > :first-child{border-top-left-radius:5px;}
+.m-table-rds > :first-child > :first-child > :last-child{border-top-right-radius:5px;}
+.m-table-rds > :last-child > :last-child > :first-child{border-bottom-left-radius:5px;}
+.m-table-rds > :last-child > :last-child > :last-child{border-bottom-right-radius:5px;}
